@@ -1,4 +1,4 @@
-package com.codingbat.string2;
+package com.codingbat.string2.src;
 
 public class DoubleChar {
 	
