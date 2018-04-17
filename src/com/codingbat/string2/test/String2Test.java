@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import com.codingbat.string2.src.DoubleChar;
 import com.codingbat.string2.src.OneTwo;
 import com.codingbat.string2.src.SameStarChar;
+import com.codingbat.string2.src.ZipZap;
 
 class String2Test {
 
@@ -66,4 +67,19 @@ class String2Test {
 		
 	}
 	
+	@Test
+	void testZipZap() {
+		assertEquals("zpXzp", ZipZap.zipZap("zipXzap"));
+		assertEquals("zpzp", ZipZap.zipZap("zopzop"));
+		assertEquals("zzzpzp", ZipZap.zipZap("zzzopzop"));
+		assertEquals("zibzp", ZipZap.zipZap("zibzap"));
+		assertEquals("zp", ZipZap.zipZap("zip"));
+		assertEquals("zi", ZipZap.zipZap("zi"));
+		assertEquals("z", ZipZap.zipZap("z"));
+		assertEquals("", ZipZap.zipZap(""));
+		assertEquals("zp", ZipZap.zipZap("zzp"));
+		assertEquals("abcppp", ZipZap.zipZap("abcppp"));
+		assertEquals("azbcppp", ZipZap.zipZap("azbcppp"));
+		assertEquals("azbcpzp", ZipZap.zipZap("azbcpzpp"));
+	}
 }
