@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+import com.codingbat.array2.src.Either24;
 import com.codingbat.array2.src.FizzArray2;
 import com.codingbat.array2.src.IsEverywhere;
 import com.codingbat.array2.src.No14;
@@ -66,4 +67,21 @@ class Array2Test {
 		assertTrue(IsEverywhere.isEverywhere(new int[] {2, 1, 2, 1, 2} , 2));
 	}
 	
+	@Test
+	void testEither24() {
+		assertTrue(Either24.either24(new int[] {1, 2, 2}));
+		assertTrue(Either24.either24(new int[] {4, 4, 1}));
+		assertFalse(Either24.either24(new int[] {4, 4, 1, 2, 2}));
+		assertFalse(Either24.either24(new int[] {1, 2, 3, 4}));
+		assertFalse(Either24.either24(new int[] {3, 5, 9}));
+		assertTrue(Either24.either24(new int[] {1, 2, 3, 4, 4}));
+		assertTrue(Either24.either24(new int[] {2, 2, 3, 4}));
+		assertTrue(Either24.either24(new int[] {1, 2, 3, 2, 2, 4}));
+		assertFalse(Either24.either24(new int[] {1, 2, 3, 2, 2, 4, 4}));
+		assertFalse(Either24.either24(new int[] {1, 2}));
+		assertTrue(Either24.either24(new int[] {2, 2}));
+		assertTrue(Either24.either24(new int[] {4, 4}));
+		assertFalse(Either24.either24(new int[] {2}));
+		assertFalse(Either24.either24(new int[] {}));
+	}
 }

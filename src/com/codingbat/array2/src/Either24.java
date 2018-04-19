@@ -8,7 +8,6 @@ public class Either24 {
 	 * either24([4, 4, 1]) -> true
 	 * either24([4, 4, 1, 2, 2]) -> false
 	 */
-	
 	public static boolean either24(int[] nums) {
 		  boolean adjacent2s=false,adjacent4s=false;
 		  for(int i=0;i<nums.length-1;i++) {
