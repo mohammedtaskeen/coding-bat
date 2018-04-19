@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 import com.codingbat.array2.src.FizzArray2;
+import com.codingbat.array2.src.IsEverywhere;
 import com.codingbat.array2.src.No14;
 
 class Array2Test {
@@ -45,4 +46,24 @@ class Array2Test {
 		assertFalse(No14.no14(new int[] {1, 4, 4}));
 	}
 
+	@Test
+	void testIsEverywhere() {
+		assertTrue(IsEverywhere.isEverywhere(new int[] {1, 2, 1, 3} , 1));
+		assertFalse(IsEverywhere.isEverywhere(new int[] {1, 2, 1, 3} , 2));
+		assertFalse(IsEverywhere.isEverywhere(new int[] {1, 2, 1, 3, 4} , 1));
+		assertTrue(IsEverywhere.isEverywhere(new int[] {2, 1, 2, 1} , 1));
+		assertTrue(IsEverywhere.isEverywhere(new int[] {2, 1, 2, 1} , 2));
+		assertFalse(IsEverywhere.isEverywhere(new int[] {2, 1, 2, 3, 1} , 2));
+		assertTrue(IsEverywhere.isEverywhere(new int[] {3, 1} , 3));
+		assertFalse(IsEverywhere.isEverywhere(new int[] {3, 1} , 2));
+		assertTrue(IsEverywhere.isEverywhere(new int[] {3} , 1));
+		assertTrue(IsEverywhere.isEverywhere(new int[] {} , 1));
+		assertTrue(IsEverywhere.isEverywhere(new int[] {1, 2, 1, 2, 3, 2, 5} , 2));
+		assertFalse(IsEverywhere.isEverywhere(new int[] {1, 2, 1, 1, 1, 2} , 2));
+		assertFalse(IsEverywhere.isEverywhere(new int[] {2, 1, 2, 1, 1, 2} , 2));
+		assertFalse(IsEverywhere.isEverywhere(new int[] {2, 1, 2, 2, 2, 1, 1, 2} , 2));
+		assertTrue(IsEverywhere.isEverywhere(new int[] {2, 1, 2, 2, 2, 1, 2, 1} , 2));
+		assertTrue(IsEverywhere.isEverywhere(new int[] {2, 1, 2, 1, 2} , 2));
+	}
+	
 }
