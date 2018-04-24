@@ -1,6 +1,7 @@
 package com.codingbat.array2.test;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -9,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import com.codingbat.array2.src.Either24;
 import com.codingbat.array2.src.FizzArray2;
 import com.codingbat.array2.src.IsEverywhere;
+import com.codingbat.array2.src.MatchUp;
 import com.codingbat.array2.src.No14;
 
 class Array2Test {
@@ -83,5 +85,20 @@ class Array2Test {
 		assertTrue(Either24.either24(new int[] {4, 4}));
 		assertFalse(Either24.either24(new int[] {2}));
 		assertFalse(Either24.either24(new int[] {}));
+	}
+	
+	@Test
+	void testMatchUp() {
+		assertEquals(2, MatchUp.matchUp(new int[] {1, 2, 3}, new int[] {2, 3, 10}));
+		assertEquals(3, MatchUp.matchUp(new int[] {1, 2, 3}, new int[] {2, 3, 5}));
+		assertEquals(2, MatchUp.matchUp(new int[] {1, 2, 3}, new int[] {2, 3, 3}));
+		assertEquals(1, MatchUp.matchUp(new int[] {5, 3}, new int[] {5, 5}));
+		assertEquals(2, MatchUp.matchUp(new int[] {5, 3}, new int[] {4, 4}));
+		assertEquals(1, MatchUp.matchUp(new int[] {5, 3}, new int[] {3, 3}));
+		assertEquals(1, MatchUp.matchUp(new int[] {5, 3}, new int[] {2, 2}));
+		assertEquals(1, MatchUp.matchUp(new int[] {5, 3}, new int[] {1, 1}));
+		assertEquals(0, MatchUp.matchUp(new int[] {5, 3}, new int[] {0, 0}));
+		assertEquals(0, MatchUp.matchUp(new int[] {4}, new int[] {4}));
+		assertEquals(1, MatchUp.matchUp(new int[] {4}, new int[] {5}));
 	}
 }
