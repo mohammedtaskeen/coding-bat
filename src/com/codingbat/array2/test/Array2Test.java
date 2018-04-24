@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import com.codingbat.array2.src.Either24;
 import com.codingbat.array2.src.FizzArray2;
+import com.codingbat.array2.src.Has77;
 import com.codingbat.array2.src.IsEverywhere;
 import com.codingbat.array2.src.MatchUp;
 import com.codingbat.array2.src.No14;
@@ -100,5 +101,23 @@ class Array2Test {
 		assertEquals(0, MatchUp.matchUp(new int[] {5, 3}, new int[] {0, 0}));
 		assertEquals(0, MatchUp.matchUp(new int[] {4}, new int[] {4}));
 		assertEquals(1, MatchUp.matchUp(new int[] {4}, new int[] {5}));
+	}
+	
+	@Test
+	void testHas77() {
+		assertTrue(Has77.has77(new int[] {1, 7, 7}));
+		assertTrue(Has77.has77(new int[] {1, 7, 1, 7}));
+		assertFalse(Has77.has77(new int[] {1, 7, 1, 1, 7}));
+		assertTrue(Has77.has77(new int[] {7, 7, 1, 1, 7}));
+		assertFalse(Has77.has77(new int[] {2, 7, 2, 2, 7, 2}));
+		assertTrue(Has77.has77(new int[] {2, 7, 2, 2, 7, 7}));
+		assertTrue(Has77.has77(new int[] {7, 2, 7, 2, 2, 7}));
+		assertFalse(Has77.has77(new int[] {7, 2, 6, 2, 2, 7}));
+		assertTrue(Has77.has77(new int[] {7, 7, 7}));
+		assertTrue(Has77.has77(new int[] {7, 1, 7}));
+		assertFalse(Has77.has77(new int[] {7, 1, 1}));
+		assertFalse(Has77.has77(new int[] {1, 2}));
+		assertFalse(Has77.has77(new int[] {1, 7}));
+		assertFalse(Has77.has77(new int[] {7}));
 	}
 }
