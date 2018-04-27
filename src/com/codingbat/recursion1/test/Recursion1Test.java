@@ -21,7 +21,7 @@ public class Recursion1Test {
 
 
 	@Test
-	void testCountHi2() {
+	void testCountHi2() { 
 		assertEquals(1, CountHi2.countHi2("ahixhi"));
 		assertEquals(2, CountHi2.countHi2("ahibhi"));
 		assertEquals(0, CountHi2.countHi2("xhixhi"));

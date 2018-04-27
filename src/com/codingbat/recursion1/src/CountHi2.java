@@ -8,7 +8,7 @@ public class CountHi2 {
 	 * countHi2("ahixhi") -> 1
 	 * countHi2("ahibhi") -> 2
 	 * countHi2("xhixhi") -> 0
-	 */
+	 */ 
 	public static int countHi2(String str) {
 		if(str.length()<2) return 0;
 		if(str.length()==2) {
