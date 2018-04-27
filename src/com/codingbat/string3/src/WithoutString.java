@@ -8,7 +8,11 @@ public class WithoutString {
 	 * Remove only non-overlapping instances, so with "xxx" removing "xx" leaves "x".
 	 * withoutString("Hello there", "llo") -> "He there"
 	 * withoutString("Hello there", "e") -> "Hllo thr"
+<<<<<<< HEAD
 	 * withoutString("Hello there", "x") -> "Hello there"
+=======
+	 * withoutString("Hello there", "x") -> "Hello there" 
+>>>>>>> branch 'master' of https://github.com/mohammedtaskeen/coding-bat.git
 	 */
 	public static String withoutString(String base, String remove) {
 		int baseLen=base.length(),removeLen=remove.length();
